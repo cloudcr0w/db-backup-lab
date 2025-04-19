@@ -1,0 +1,10 @@
+# 🕒 Example cronjobs for scheduled backups
+
+# Run PostgreSQL backup daily at 02:00
+0 2 * * * /bin/bash /home/adam/projekty/Database/scripts/pg_backup.sh
+
+# Run MySQL backup daily at 02:30
+30 2 * * * /bin/bash /home/adam/projekty/Database/scripts/mysql_backup.sh
+
+# Redirect output to log files (optional)
+# 0 2 * * * /bin/bash /home/adam/projekty/Database/scripts/pg_backup.sh >> /home/adam/projekty/Database/logs/pg_backup.log 2>&1
