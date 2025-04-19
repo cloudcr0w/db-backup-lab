@@ -53,6 +53,27 @@ bash scripts/mysql_backup.sh
 
 ---
 
+## 🔁 Automation with cron
+
+To schedule daily backups automatically, see the `cron-example.txt` file:
+
+```bash
+cat cron-example.txt
+```
+
+Example:
+```bash
+0 2 * * * /bin/bash /home/adam/projekty/Database/scripts/pg_backup.sh
+```
+
+You can also redirect output to a log file:
+```bash
+0 2 * * * /bin/bash /home/adam/projekty/Database/scripts/pg_backup.sh >> /home/adam/projekty/Database/logs/pg_backup.log 2>&1
+```
+
+
+---
+
 ## 🧪 Restore Testing
 
 Check `restore_tests/sample_restore.md` for notes on recovery testing and restore commands.
