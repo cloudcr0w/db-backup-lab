@@ -15,3 +15,6 @@ mkdir -p $BACKUP_DIR
 pg_dump $DB_NAME > "$BACKUP_DIR/${DB_NAME}_backup_$TIMESTAMP.sql"
 
 echo "✅ Backup completed: ${DB_NAME}_backup_$TIMESTAMP.sql"
+
+# Upload to S3
+aws s3 cp "$BACKUP_DIR/${DB_NAME}_backup_$TIMESTAMP.sql" s3://adam-db-backups/
