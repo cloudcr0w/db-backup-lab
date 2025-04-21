@@ -71,7 +71,28 @@ You can also redirect output to a log file:
 0 2 * * * /bin/bash /home/adam/projekty/Database/scripts/pg_backup.sh >> /home/adam/projekty/Database/logs/pg_backup.log 2>&1
 ```
 
+---
 
+## 🧪 Restore Check Script
+
+A helper script to validate that the latest PostgreSQL and MySQL backups:
+
+- Exist
+- Are not empty
+- Are logged to a file (`logs/restore_check.log`)
+- And are printed to terminal with color-coded status ✅ ❌
+
+### Run manually:
+```bash
+bash scripts/restore_check.sh
+```
+Output:
+
+Green ✅ means backup exists and is valid
+
+Red ❌ means file is missing or empty
+
+Both statuses are also logged with timestamps in logs/restore_check.log
 ---
 
 ## 🧪 Restore Testing
