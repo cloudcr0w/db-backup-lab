@@ -70,6 +70,24 @@ You can also redirect output to a log file:
 ```bash
 0 2 * * * /bin/bash /home/adam/projekty/Database/scripts/pg_backup.sh >> /home/adam/projekty/Database/logs/pg_backup.log 2>&1
 ```
+---
+
+## ☁️ Upload Backups to AWS S3
+
+The PostgreSQL backup script includes automatic upload to an AWS S3 bucket using the AWS CLI.
+
+Make sure you have:
+
+- Installed and configured AWS CLI (`aws configure`)
+- An accessible S3 bucket (e.g. `adam-db-backups`)
+
+### Example
+
+```bash
+# Inside pg_backup.sh
+aws s3 cp ./backups/exampledb_backup_20250401.sql s3://adam-db-backups/
+```
+The file will be uploaded to your S3 bucket after each backup is completed.
 
 ---
 
