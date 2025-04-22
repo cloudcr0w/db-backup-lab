@@ -2,3 +2,5 @@
 backups/*.sql
 
 # But keep the folder (with .gitkeep)
+
+backups/*.sql.gpg
