@@ -21,3 +21,13 @@ aws s3 cp "$BACKUP_DIR/${DB_NAME}_backup_$TIMESTAMP.sql" s3://adam-db-backups-pr
 
 # Create or update symlink to latest backup
 ln -sf "${BACKUP_DIR}/${DB_NAME}_backup_${TIMESTAMP}.sql" "${BACKUP_DIR}/latest_pg_backup.sql"
+
+# Encrypt the backup file
+gpg --batch --yes --passphrase "supersecret" \
+  -c "$BACKUP_DIR/${DB_NAME}_backup_$TIMESTAMP.sql"
+
+# Optional: remove unencrypted file
+rm "$BACKUP_DIR/${DB_NAME}_backup_$TIMESTAMP.sql"
+
+# Upload encrypted file instead
+aws s3 cp "$BACKUP_DIR/${DB_NAME}_backup_$TIMESTAMP.sql.gpg" s3://adam-db-backups-project/
