@@ -1,2 +1,4 @@
-# Backup files (SQL dumps)
+# Ignore actual backup files
 backups/*.sql
+
+# But keep the folder (with .gitkeep)
