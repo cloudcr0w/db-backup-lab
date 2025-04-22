@@ -81,6 +81,19 @@ Make sure you have:
 - Installed and configured AWS CLI (`aws configure`)
 - An accessible S3 bucket (e.g. `adam-db-backups`)
 
+
+---
+
+## 🔗 Symlink to Latest Backup
+
+Each time a PostgreSQL backup is created, a symbolic link `latest_pg_backup.sql` is updated to always point to the most recent backup file.
+
+This allows easier referencing in restore or validation scripts.
+
+```bash
+psql exampledb < backups/latest_pg_backup.sql
+```
+
 ### Example
 
 ```bash
@@ -101,6 +114,7 @@ A helper script to validate that the latest PostgreSQL and MySQL backups:
 - And are printed to terminal with color-coded status ✅ ❌
 
 ### Run manually:
+
 ```bash
 bash scripts/restore_check.sh
 ```
