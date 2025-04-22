@@ -94,6 +94,24 @@ This allows easier referencing in restore or validation scripts.
 psql exampledb < backups/latest_pg_backup.sql
 ```
 
+---
+
+## 🔐 Backup Encryption
+
+Before uploading to S3, the PostgreSQL backup file is encrypted using GPG symmetric encryption.
+
+```bash
+gpg --symmetric --cipher-algo AES256 <file>
+```
+Passphrase is provided in the script (insecure – for testing only).
+
+The result is a .sql.gpg file, which is then uploaded to S3.
+
+To decrypt:
+```bash
+gpg --output decrypted.sql --decrypt exampledb_backup_xxx.sql.gpg
+```
+
 ### Example
 
 ```bash
