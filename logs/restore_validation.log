@@ -1,0 +1,13 @@
+🔍 Restore Validation – 2025-04-22 08:01:48
+❌ Backup file not found: backups/latest_pg_backup.sql
+🔍 Restore Validation – 2025-04-22 08:02:17
+❌ Backup file not found: backups/latest_pg_backup.sql
+🔍 Restore Validation – 2025-04-22 08:04:49
+❌ Backup file not found: ./backups/latest_pg_backup.sql
+🔍 Restore Validation – 2025-04-22 08:08:12
+❌ Backup file not found: ./backups/latest_pg_backup.sql
+🔍 Restore Validation – 2025-04-22 08:14:05
+❌ Backup file not found: ./backups/latest_pg_backup.sql
+🔍 Restore Validation – 2025-04-22 08:15:15
+✅ Backup seems to contain valid SQL structure
+-----------------------------
