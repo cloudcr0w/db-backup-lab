@@ -52,6 +52,24 @@ bash scripts/mysql_backup.sh
 ⚠️ Make sure your DB credentials and host access are correctly configured.
 
 ---
+---
+
+## 🔐 Backup Encryption (GPG)
+
+Before uploading backups to S3, the PostgreSQL dump is encrypted using symmetric GPG encryption.
+
+### How it works
+
+- GPG uses a passphrase (currently hardcoded for demo purposes)
+- The resulting file `exampledb_backup_YYYYMMDD.sql.gpg` is sent to S3
+- The unencrypted `.sql` file is removed after encryption
+
+### Decryption example
+
+```bash
+gpg --output decrypted.sql --decrypt backups/exampledb_backup_YYYYMMDD.sql.gpg
+```
+💡 In production, the passphrase should be stored securely (e.g. in environment variable or AWS Secrets Manager)
 
 ## 🔁 Automation with cron
 
