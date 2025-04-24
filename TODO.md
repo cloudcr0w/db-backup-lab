@@ -29,7 +29,6 @@ A list of planned improvements and ideas for future development.
 - [ ] Consider support for MongoDB / other engines (optional)
 
 ---
-
 ## 💬 Final thought
 
 > "Some people wait for perfect conditions.  
@@ -40,3 +39,33 @@ A list of planned improvements and ideas for future development.
 
 > author, unknown.  
 > XD
+
+
+
+# 🛠️ Developer Notes – Database Backup Lab
+
+This file contains ideas, notes, and personal reminders related to the development of this project.
+
+---
+
+## 🧪 Ideas for Docker restore
+
+- Use `postgres:13` image
+- Mount `backups/` into `/docker-entrypoint-initdb.d/`
+- Consider using `docker-compose` for repeatable test setup
+- Add `restore_docker_test.sh` integration once validated manually
+
+---
+
+## 🔐 GPG
+
+- Switch to public/private key pair in future?
+- Store passphrase in `.env` or AWS Secrets Manager?
+
+---
+
+## 🌐 Next Steps
+
+- Basic CI check with `shellcheck`
+- Explore sending backup failure alert to Slack via webhook
+
