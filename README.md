@@ -25,14 +25,22 @@ This project explores backup and restore strategies for PostgreSQL and MySQL dat
 ## 📁 Project Structure
 
 ```
-scripts/
-├── pg_backup.sh         # PostgreSQL backup script
-├── mysql_backup.sh      # MySQL backup script
-
-restore_tests/
-└── sample_restore.md    # Notes & test scenarios
-
-README.md                # Project overview and instructions
+.
+├── Makefile
+├── README.md
+├── TODO.md
+├── backups
+│   ├── ...
+├── cron-example.txt
+├── logs
+│   ├── restore_check.log
+│   └── restore_validation.log
+└── scripts
+    ├── mysql_backup.sh
+    ├── pg_backup.sh
+    ├── restore_check.sh
+    ├── restore_docker_test.sh
+    └── restore_validate.sh
 ```
 
 ---
