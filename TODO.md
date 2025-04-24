@@ -17,7 +17,7 @@ A list of planned improvements and ideas for future development.
 - [x] Push backup files to AWS S3 (using `aws s3 cp`)
 - [x] Add timestamp symlink to latest backup
 - [x] Encrypt backups before storing (e.g. with GPG or zip password)
-
+- [x] Add Makefile or CLI wrapper for quick usage
 ---
 
 ## 🔜 In Progress / Planned
@@ -25,7 +25,6 @@ A list of planned improvements and ideas for future development.
 - [ ] Create automatic restore test with Docker DB container
 - [ ] Implement email or Slack notification on backup failure
 - [ ] Improve environment variable support for user/password
-- [ ] Add Makefile or CLI wrapper for quick usage
 - [ ] Add tests and CI pipeline for script linting
 - [ ] Consider support for MongoDB / other engines (optional)
 
