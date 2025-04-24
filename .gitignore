@@ -4,3 +4,5 @@ backups/*.sql
 # But keep the folder (with .gitkeep)
 
 backups/*.sql.gpg
+# VS Code settings
+.vscode/.json
