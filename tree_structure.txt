@@ -1,0 +1,25 @@
+.
+├── Makefile
+├── README.md
+├── TODO.md
+├── backups
+│   ├── exampledb_backup_20250422_074726.sql
+│   ├── exampledb_backup_20250422_074956.sql
+│   ├── exampledb_backup_20250422_075135.sql
+│   ├── exampledb_backup_20250422_075637.sql
+│   ├── exampledb_backup_20250422_082635.sql.gpg
+│   ├── exampledb_backup_test.sql
+│   └── latest_pg_backup.sql -> ./backups/exampledb_backup_20250422_082635.sql
+├── cron-example.txt
+├── logs
+│   ├── restore_check.log
+│   └── restore_validation.log
+├── scripts
+│   ├── mysql_backup.sh
+│   ├── pg_backup.sh
+│   ├── restore_check.sh
+│   ├── restore_docker_test.sh
+│   └── restore_validate.sh
+└── tree_structure.txt
+
+4 directories, 19 files
