@@ -5,4 +5,5 @@ backups/*.sql
 
 backups/*.sql.gpg
 # VS Code settings
-.vscode/.json
+
+/.vscode
